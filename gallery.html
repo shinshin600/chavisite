@@ -25,18 +25,14 @@
     </nav>
   </header>
 
-  <section class="carousel-section">
+  <section class="gallery-section">
     <h2>גלריית רגעים</h2>
-    <div class="carousel">
-      <button class="carousel-btn prev">&#10094;</button>
-      <div class="carousel-track">
-        <img src="images/gallery1.jpg" class="carousel-item active" alt="">
-        <img src="images/gallery2.jpg" class="carousel-item" alt="">
-        <img src="images/gallery3.jpg" class="carousel-item" alt="">
-        <img src="images/gallery4.jpg" class="carousel-item" alt="">
-        <img src="images/gallery5.jpg" class="carousel-item" alt="">
-      </div>
-      <button class="carousel-btn next">&#10095;</button>
+    <div class="gallery-grid">
+      <img src="images/gallery1.jpg" alt="רגע מהגלריה 1">
+      <img src="images/gallery2.jpg" alt="רגע מהגלריה 2">
+      <img src="images/gallery3.jpg" alt="רגע מהגלריה 3">
+      <img src="images/gallery4.jpg" alt="רגע מהגלריה 4">
+      <img src="images/gallery5.jpg" alt="רגע מהגלריה 5">
     </div>
   </section>
   
@@ -44,65 +40,7 @@
     <p>© כל הזכויות שמורות לחוי שיינברגר</p>
   </footer>
 
-  <script>
-    let currentIndex = 0;
-    const items = document.querySelectorAll(".carousel-item");
-
-    function updateCarousel() {
-      items.forEach((item, index) => {
-        item.classList.remove("active");
-        if (index === currentIndex) {
-          item.classList.add("active");
-        }
-      });
-    }
-
-    function moveCarousel(step) {
-      currentIndex += step;
-      if (currentIndex < 0) currentIndex = items.length - 1;
-      if (currentIndex >= items.length) currentIndex = 0;
-      updateCarousel();
-    }
-
-    // הפעלה ראשונית
-    updateCarousel();
-  </script>
-
-<script>
-  const track = document.querySelector('.carousel-track');
-  const items = document.querySelectorAll('.carousel-item');
-  const prevBtn = document.querySelector('.carousel-btn.prev');
-  const nextBtn = document.querySelector('.carousel-btn.next');
-
-  let activeIndex = 0;
-
-  function updateActiveItem(index) {
-    items.forEach((item, i) => {
-      item.classList.remove('active');
-      if (i === index) item.classList.add('active');
-    });
-
-    // מרכז את האייטם הפעיל
-    const active = items[index];
-    const offset = active.offsetLeft - (track.offsetWidth / 2) + (active.offsetWidth / 2);
-    track.scrollTo({ left: offset, behavior: 'smooth' });
-  }
-
-  prevBtn.addEventListener('click', () => {
-    activeIndex = (activeIndex - 1 + items.length) % items.length;
-    updateActiveItem(activeIndex);
-  });
-
-  nextBtn.addEventListener('click', () => {
-    activeIndex = (activeIndex + 1) % items.length;
-    updateActiveItem(activeIndex);
-  });
-
-  // טען אייטם ראשון
-  window.addEventListener('load', () => {
-    updateActiveItem(activeIndex);
-  });
-</script>
+  <!-- אין צורך בסקריפט בגלריה החדשה -->
 
 
 </body>
