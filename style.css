@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Assistant', sans-serif;
+  background-color: #fefcfb;
+  direction: rtl;
+  padding-bottom: 40px;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: #813f57;
+  margin-top: 0;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Header */
+.main-header {
+  background-color: #fefcfb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  border-bottom: 1px solid #e5d3dc;
+}
+
+.logo-container img {
+  height: 60px;
+}
+
+.main-header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 25px;
+}
+
+.main-header nav ul li a {
+  text-decoration: none;
+  color: #8a4d66;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.main-header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero-section {
+  background: url('images/hero.jpg') center/cover no-repeat;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.hero-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px 40px;
+  border-radius: 12px;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-content .subtitle {
+  font-size: 20px;
+  color: #35958f;
+  margin-bottom: 15px;
+}
+
+.hero-content .description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #8a4d66;
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* תוכן */
+.main-content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+/* שירותים */
+.services-section {
+  padding: 60px 20px;
+  background-color: #fef9f6;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.4em;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-box img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.service-box:hover img {
+  transform: scale(1.05);
+}
+
+.service-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.service-overlay h3 {
+  margin: 0 0 10px;
+  font-size: 1.4em;
+  color: #fff;
+}
+
+.service-overlay p {
+  margin: 0;
+  font-size: 1em;
+  color: #eee;
+}
+
+/* פוטר */
+.main-footer {
+  background-color: #fefcfb;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  border-top: 1px solid #e0dcd8;
+  margin-top: 60px;
+}
+
+/* גלריה */
+.carousel-section {
+  background-color: #f9f7f4;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.carousel-section h2 {
+  font-size: 2.4em;
+  margin-bottom: 40px;
+}
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  transition: transform 0.5s ease;
+  justify-content: center; /* חשוב */
+  overflow: hidden;
+}
+
+.carousel-item {
+  flex: 0 0 300px;
+  height: 400px;
+  opacity: 0.5;
+  transform: scale(0.9);
+  transition: all 0.4s ease;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.carousel-item.active {
+  flex: 0 0 500px;
+  height: 500px;
+  opacity: 1;
+  transform: scale(1.05);
+  z-index: 2;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px 16px;
+  z-index: 5;
+  color: #813f57;
+  border-radius: 50%;
+}
+
+.carousel-btn.prev {
+  right: 10px;
+}
+
+.carousel-btn.next {
+  left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-item {
+    flex: 0 0 120px;
+    height: 150px;
+  }
+
+  .carousel-item.active {
+    flex: 0 0 250px;
+    height: 250px;
+  }
+}
