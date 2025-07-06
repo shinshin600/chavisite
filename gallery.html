@@ -27,12 +27,16 @@
 
   <section class="gallery-section">
     <h2>גלריית רגעים</h2>
-    <div class="gallery-grid">
-      <img src="images/gallery1.jpg" alt="רגע מהגלריה 1">
-      <img src="images/gallery2.jpg" alt="רגע מהגלריה 2">
-      <img src="images/gallery3.jpg" alt="רגע מהגלריה 3">
-      <img src="images/gallery4.jpg" alt="רגע מהגלריה 4">
-      <img src="images/gallery5.jpg" alt="רגע מהגלריה 5">
+    <div class="gallery-carousel">
+      <div class="carousel-track">
+        <img src="images/gallery1.jpg" alt="רגע מהגלריה 1">
+        <img src="images/gallery2.jpg" alt="רגע מהגלריה 2">
+        <img src="images/gallery3.jpg" alt="רגע מהגלריה 3">
+        <img src="images/gallery4.jpg" alt="רגע מהגלריה 4">
+        <img src="images/gallery5.jpg" alt="רגע מהגלריה 5">
+      </div>
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
     </div>
   </section>
   
@@ -40,8 +44,28 @@
     <p>© כל הזכויות שמורות לחוי שיינברגר</p>
   </footer>
 
-  <!-- אין צורך בסקריפט בגלריה החדשה -->
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const items = document.querySelectorAll('.carousel-track img');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
 
+    let index = 0;
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + items.length) % items.length;
+      updateCarousel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % items.length;
+      updateCarousel();
+    });
+  </script>
 
 </body>
 </html>
