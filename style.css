@@ -189,28 +189,36 @@ p {
 }
 
 
-.gallery-carousel {
+.gallery-scroller {
   position: relative;
   max-width: 1000px;
   margin: auto;
   overflow: hidden;
 }
 
-.carousel-track {
+.scroller-track {
   display: flex;
-  transition: transform 0.5s ease;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
-.carousel-track img {
+.scroller-track::-webkit-scrollbar {
+  display: none;
+}
+
+.scroller-track img {
   width: 100%;
   flex: 0 0 100%;
   height: 500px;
   object-fit: cover;
+  scroll-snap-align: center;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.carousel-btn {
+.scroll-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -224,16 +232,16 @@ p {
   border-radius: 50%;
 }
 
-.carousel-btn.prev {
+.scroll-btn.prev {
   right: 10px;
 }
 
-.carousel-btn.next {
+.scroll-btn.next {
   left: 10px;
 }
 
 @media screen and (max-width: 768px) {
-  .carousel-track img {
+  .scroller-track img {
     height: 250px;
   }
 }
