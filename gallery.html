@@ -27,16 +27,16 @@
 
   <section class="gallery-section">
     <h2>גלריית רגעים</h2>
-    <div class="gallery-scroller">
-      <button class="scroll-btn prev">&#10094;</button>
-      <div class="scroller-track">
+    <div class="carousel-container">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-track">
         <img src="images/gallery1.jpg" alt="רגע מהגלריה 1">
         <img src="images/gallery2.jpg" alt="רגע מהגלריה 2">
         <img src="images/gallery3.jpg" alt="רגע מהגלריה 3">
         <img src="images/gallery4.jpg" alt="רגע מהגלריה 4">
         <img src="images/gallery5.jpg" alt="רגע מהגלריה 5">
       </div>
-      <button class="scroll-btn next">&#10095;</button>
+      <button class="carousel-btn next">&#10095;</button>
     </div>
   </section>
   
@@ -45,17 +45,27 @@
   </footer>
 
   <script>
-    const track = document.querySelector('.scroller-track');
-    const prevBtn = document.querySelector('.scroll-btn.prev');
-    const nextBtn = document.querySelector('.scroll-btn.next');
+    const track = document.querySelector('.carousel-track');
+    const slides = document.querySelectorAll('.carousel-track img');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    let index = 0;
+
+    function updateSlide() {
+      track.style.transform = `translateX(-${index * 100}% )`;
+    }
 
     prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -track.clientWidth, behavior: 'smooth' });
+      index = (index - 1 + slides.length) % slides.length;
+      updateSlide();
     });
 
     nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: track.clientWidth, behavior: 'smooth' });
+      index = (index + 1) % slides.length;
+      updateSlide();
     });
+
+    window.addEventListener('load', updateSlide);
   </script>
 </body>
 </html>
