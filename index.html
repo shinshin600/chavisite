@@ -19,7 +19,7 @@
         <li><a href="about.html">אודות</a></li>
         <li><a href="services.html">שירותים</a></li>
         <li><a href="#gallery">גלריה</a></li>
-        <li><a href="testimonials.html">המלצות</a></li>
+        <li><a href="#testimonials">המלצות</a></li>
         <li><a href="contact.html">צור קשר</a></li>
       </ul>
     </nav>
@@ -79,6 +79,59 @@
     </div>
   </section>
 
+  <section id="testimonials" class="testimonials-section">
+    <h2>לקוחות מספרות</h2>
+    <div class="testimonials-carousel">
+      <button class="testimonial-arrow left">&#10094;</button>
+      <div class="testimonial-track">
+        <blockquote class="testimonial">
+          <p>"חוי פשוט מדהימה! יצאתי מהעיסוי חדשה."</p>
+          <footer>– מרים</footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"השתתפתי בקורס ההכנה ללידה והרגשתי הרבה יותר מוכנה."</p>
+          <footer>– שרה</footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"היחס האישי והמקצועיות של חוי שווים כל רגע."</p>
+          <footer>– הדס</footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"לא חשבתי שעיסוי יכול להקל כך על הכאב. תודה!"</p>
+          <footer>– רבקה</footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"תמיכת הלידה של חוי נתנה לי כוח וביטחון."</p>
+          <footer>– אסתר</footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"ממליצה בחום לכל מי שמחפשת מקצועיות ורגישות."</p>
+          <footer>– ציפי</footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"חוויה חיובית ומרגיעה מהשיחה הראשונה ועד סוף הטיפול."</p>
+          <footer>– לאה</footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"הגעתי עם הרבה חששות וחוי ידעה בדיוק איך להרגיע."</p>
+          <footer>– יעל</footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"שירות מכל הלב, מקום נקי ומסודר."</p>
+          <footer>– תהילה</footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"אין על חוי! מרגישה בטוחה בידיים שלה בכל טיפול."</p>
+          <footer>– שושי</footer>
+        </blockquote>
+      </div>
+      <button class="testimonial-arrow right">&#10095;</button>
+    </div>
+    <div style="margin-top: 30px;">
+      <a href="https://www.google.com/maps/place/%D7%97%D7%95%D7%99+%D7%A9%D7%99%D7%99%D7%A0%D7%91%D7%A8%D7%92%D7%A8+-+%D7%A2%D7%99%D7%A1%D7%95%D7%99+%D7%9E%D7%A7%D7%A6%D7%95%D7%A2%D7%99+%D7%9C%D7%A0%D7%A9%D7%99%D7%9D+%D7%91%D7%9C%D7%91%D7%93+%D7%95%D7%AA%D7%95%D7%9E%D7%9B%D7%AA+%D7%9C%D7%99%D7%93%D7%94" target="_blank" class="btn-primary">עוד המלצות בגוגל</a>
+    </div>
+  </section>
+
 <footer class="main-footer">
   <p>© כל הזכויות שמורות לחוי שיינברגר</p>
 </footer>
@@ -115,6 +168,34 @@
     });
 
     window.addEventListener('resize', update);
+
+    const testiTrack = document.querySelector('.testimonial-track');
+    if (testiTrack) {
+      const testimonials = Array.from(testiTrack.children);
+      const tPrev = document.querySelector('.testimonial-arrow.left');
+      const tNext = document.querySelector('.testimonial-arrow.right');
+      let currTesti = 0;
+
+      function updateTesti() {
+        testiTrack.style.transform = `translateX(${-currTesti * 100}%)`;
+      }
+
+      updateTesti();
+
+      tPrev.addEventListener('click', () => {
+        if (currTesti > 0) {
+          currTesti--;
+          updateTesti();
+        }
+      });
+
+      tNext.addEventListener('click', () => {
+        if (currTesti < testimonials.length - 1) {
+          currTesti++;
+          updateTesti();
+        }
+      });
+    }
   });
 </script>
 
