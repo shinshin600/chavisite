@@ -279,6 +279,7 @@ p {
 }
 
 .testimonials-carousel {
+  direction: ltr;
   position: relative;
   max-width: 800px;
   margin: auto;
@@ -288,6 +289,7 @@ p {
 .testimonial-track {
   display: flex;
   transition: transform 0.4s ease;
+  width: 100%;
 }
 
 .testimonial {

@@ -183,17 +183,13 @@
       updateTesti();
 
       tPrev.addEventListener('click', () => {
-        if (currTesti > 0) {
-          currTesti--;
-          updateTesti();
-        }
+        currTesti = (currTesti - 1 + testimonials.length) % testimonials.length;
+        updateTesti();
       });
 
       tNext.addEventListener('click', () => {
-        if (currTesti < testimonials.length - 1) {
-          currTesti++;
-          updateTesti();
-        }
+        currTesti = (currTesti + 1) % testimonials.length;
+        updateTesti();
       });
     }
   });
