@@ -101,17 +101,13 @@
     update();
 
     btnPrev.addEventListener('click', () => {
-      if (current > 0) {
-        current--;
-        update();
-      }
+      current = (current - 1 + slides.length) % slides.length;
+      update();
     });
 
     btnNext.addEventListener('click', () => {
-      if (current < slides.length - 1) {
-        current++;
-        update();
-      }
+      current = (current + 1) % slides.length;
+      update();
     });
 
     window.addEventListener('resize', update);

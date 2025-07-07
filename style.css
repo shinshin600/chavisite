@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Assistant', sans-serif;
@@ -249,8 +253,10 @@ p {
   color: #8a4d66;
   cursor: pointer;
   user-select: none;
-  z-index: 2;
+  z-index: 5;
+  line-height: 1;
 }
+
 
 .carousel-arrow.left {
   left: 10px;
