@@ -220,16 +220,20 @@ p {
   overflow: hidden;
 }
 
+
 .carousel-track {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   transition: transform 0.4s ease;
 }
 
 .carousel-track img {
-  width: 220px;
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
   margin: 0 10px;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -262,5 +266,6 @@ p {
 @media screen and (max-width: 768px) {
   .carousel-track img {
     width: 160px;
+    height: 120px;
   }
 }
