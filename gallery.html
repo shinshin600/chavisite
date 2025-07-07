@@ -27,12 +27,16 @@
 
   <section class="gallery-section">
     <h2>גלריית רגעים</h2>
-    <div class="gallery-grid">
-      <img src="images/gallery1.jpg" alt="רגע מהגלריה 1">
-      <img src="images/gallery2.jpg" alt="רגע מהגלריה 2">
-      <img src="images/gallery3.jpg" alt="רגע מהגלריה 3">
-      <img src="images/gallery4.jpg" alt="רגע מהגלריה 4">
-      <img src="images/gallery5.jpg" alt="רגע מהגלריה 5">
+    <div class="gallery-carousel">
+      <button class="carousel-arrow left">&#10094;</button>
+      <div class="carousel-track">
+        <img src="images/gallery1.jpg" alt="רגע מהגלריה 1">
+        <img src="images/gallery2.jpg" alt="רגע מהגלריה 2">
+        <img src="images/gallery3.jpg" alt="רגע מהגלריה 3">
+        <img src="images/gallery4.jpg" alt="רגע מהגלריה 4">
+        <img src="images/gallery5.jpg" alt="רגע מהגלריה 5">
+      </div>
+      <button class="carousel-arrow right">&#10095;</button>
     </div>
   </section>
   
@@ -40,7 +44,40 @@
     <p>© כל הזכויות שמורות לחוי שיינברגר</p>
   </footer>
 
-  <!-- אין צורך בסקריפט בגלריה החדשה -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const track = document.querySelector('.carousel-track');
+      const slides = Array.from(track.children);
+      const btnPrev = document.querySelector('.carousel-arrow.left');
+      const btnNext = document.querySelector('.carousel-arrow.right');
+      let current = Math.floor(slides.length / 2);
+
+      function update() {
+        slides.forEach((img, idx) => img.classList.toggle('active', idx === current));
+        const slideWidth = slides[0].offsetWidth + 20;
+        const offset = -current * slideWidth + (track.parentElement.offsetWidth - slideWidth) / 2;
+        track.style.transform = `translateX(${offset}px)`;
+      }
+
+      update();
+
+      btnPrev.addEventListener('click', () => {
+        if (current > 0) {
+          current--;
+          update();
+        }
+      });
+
+      btnNext.addEventListener('click', () => {
+        if (current < slides.length - 1) {
+          current++;
+          update();
+        }
+      });
+
+      window.addEventListener('resize', update);
+    });
+  </script>
 
 
 </body>
