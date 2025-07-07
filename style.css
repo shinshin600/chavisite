@@ -249,6 +249,7 @@ p {
   color: #8a4d66;
   cursor: pointer;
   user-select: none;
+  z-index: 2;
 }
 
 .carousel-arrow.left {
