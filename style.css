@@ -49,9 +49,11 @@ p {
   margin: 0;
   display: flex;
   gap: 20px;
+  direction: ltr; /* align navigation items from the left */
 }
 
 .main-header nav ul li {
+  direction: rtl; /* keep Hebrew text direction */
   position: relative;
   padding: 0 10px;
 }
