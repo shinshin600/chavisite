@@ -117,27 +117,30 @@ p {
 
 
 .full-logo {
-  max-width: 25%;
+  max-width: 21.25%;
   height: auto;
   margin-bottom: 15px;
 }
 
 
 .hero-overlay {
+  position: absolute;
+  inset: 0;
   background-color: rgba(255, 255, 255, 0.5);
-  margin-top: 0;
   padding: 15px 25px;
   border-radius: 12px;
-  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1.6;
   text-align: center;
   font-family: 'Varela Round', sans-serif;
-  align-self: center;
 }
 
 .about-title {
   margin-top: 0;
-  text-align: right;
+  text-align: center;
+  font-size: 2em;
 }
 
 .hero-content h1 {
