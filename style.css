@@ -81,37 +81,44 @@ p {
   background: url('images/hero.jpg') center/cover no-repeat;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-between;
+  text-align: right;
   padding: 40px;
+  gap: 40px;
 }
 
 .hero-content {
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 30px 40px;
+  padding: 20px 30px;
   border-radius: 12px;
-  max-width: 600px;
+  max-width: 350px;
+  width: fit-content;
+  order: 2;
 }
 
 .about-overlay {
   background-color: rgba(255, 255, 255, 0.85);
-  margin-top: 30px;
-  padding: 20px 30px;
+  margin-top: 0;
+  padding: 20px 25px;
   border-radius: 12px;
-  max-width: 700px;
+  max-width: 350px;
   line-height: 1.8;
+  text-align: right;
+  order: 1;
 }
 
-.hero-content h1 {
-  font-size: 48px;
+.hero-logo {
+  width: 320px;
+  max-width: 100%;
+  display: block;
   margin-bottom: 10px;
 }
 
 .hero-content .subtitle {
   font-size: 20px;
-  color: #35958f;
+  color: #813f57;
   margin-bottom: 15px;
 }
 
@@ -385,4 +392,17 @@ p {
   width: 100%;
   height: 450px;
   border: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-overlay {
+    margin-top: 30px;
+  }
+  .hero-content {
+    text-align: center;
+  }
 }
