@@ -87,10 +87,9 @@ p {
 .hero-section {
   background: url('images/hero.jpg') center/cover no-repeat;
   min-height: 100vh;
-  display: flex;
-  flex-direction: row-reverse;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  justify-content: space-between;
   text-align: right;
   padding: 40px;
   gap: 40px;
@@ -100,7 +99,8 @@ p {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px 30px;
   border-radius: 12px;
-  max-width: 500px;
+  max-width: 360px;
+  justify-self: center;
 }
 
 .about-overlay {
@@ -112,6 +112,7 @@ p {
   line-height: 1.6;
   text-align: right;
   font-family: 'Varela Round', sans-serif;
+  justify-self: end;
 }
 
 .hero-content h1 {
@@ -436,13 +437,16 @@ p {
 
 @media screen and (max-width: 768px) {
   .hero-section {
+    display: flex;
     flex-direction: column;
     text-align: center;
   }
   .about-overlay {
     margin-top: 30px;
+    align-self: center;
   }
   .hero-content {
+    margin: 0 auto;
     text-align: center;
   }
 }
