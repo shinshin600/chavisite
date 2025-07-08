@@ -107,7 +107,7 @@ p {
 
 
 .hero-content {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
   padding: 10px 20px;
   border-radius: 12px;
   max-width: 340px;
@@ -117,14 +117,14 @@ p {
 
 
 .full-logo {
-  max-width: 110%;
+  max-width: 25%;
   height: auto;
   margin-bottom: 15px;
 }
 
 
 .hero-overlay {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.5);
   margin-top: 0;
   padding: 15px 25px;
   border-radius: 12px;
