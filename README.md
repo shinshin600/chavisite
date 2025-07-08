@@ -9,7 +9,6 @@
 ## ✨ מבנה הקבצים
 
 ├── index.html # דף הבית (כולל גלריה)
-├── about.html # עמוד אודות
 ├── contact.html # עמוד צור קשר עם טופס
 ├── services.html # פירוט שירותים
 ├── testimonials.html # המלצות מלקוחות + קישור לגוגל
