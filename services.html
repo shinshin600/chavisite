@@ -2,7 +2,14 @@
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>השירותים שלי – חוי שיינברגר</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet" integrity="sha384-4w4pNv2XdLT2A0i2Ghqy5MzZY1o5LZiN5N4dAJE1lghYzBL2cJlgd5tbhbcL1wQP" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.png" type="image/png">
 </head>
@@ -11,19 +18,21 @@
   
 
   <header class="main-header">
-    <div class="logo-container">
-      <img src="logo.png" alt="לוגו חוי שיינברגר">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="logo-container">
+        <img src="logo.png" alt="לוגו חוי שיינברגר">
+      </div>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> דף הבית</a></li>
+          <li class="nav-item"><a href="index.html#about" class="nav-link"><i class="fa-solid fa-info-circle"></i> אודות</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link active"><i class="fa-solid fa-hand-holding-medical"></i> שירותים</a></li>
+          <li class="nav-item"><a href="index.html#gallery" class="nav-link"><i class="fa-solid fa-image"></i> גלריה</a></li>
+          <li class="nav-item"><a href="index.html#testimonials" class="nav-link"><i class="fa-solid fa-comments"></i> המלצות</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fa-solid fa-envelope"></i> צור קשר</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">דף הבית</a></li>
-        <li><a href="index.html#about">אודות</a></li>
-        <li><a href="services.html" class="active">שירותים</a></li>
-        <li><a href="index.html#gallery">גלריה</a></li>
-        <li><a href="index.html#testimonials">המלצות</a></li>
-        <li><a href="contact.html">צור קשר</a></li>
-      </ul>
-    </nav>
   </header>
   
   <main class="main-content">
@@ -61,6 +70,12 @@
 <footer class="main-footer">
   <p>© כל הזכויות שמורות לחוי שיינברגר</p>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-QJHtvGhmr9bInhZRA2La1B1Vh5WcvM/Qe1CRWojc9kaPJkzQ0R6Xr5P0YfRvH+8A" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </body>
 </html>
