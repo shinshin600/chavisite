@@ -95,23 +95,26 @@ p {
   gap: 40px;
 }
 
+
 .hero-content {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px 30px;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 10px 20px;
   border-radius: 12px;
-  max-width: 300px;
+  max-width: 340px;
   align-self: center;
   text-align: center;
 }
 
+
 .full-logo {
-  max-width: 100%;
+  max-width: 110%;
   height: auto;
   margin-bottom: 15px;
 }
 
+
 .about-overlay {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.6);
   margin-top: 0;
   padding: 15px 25px;
   border-radius: 12px;
