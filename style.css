@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Assistant', sans-serif;
+  font-family: 'Heebo', sans-serif;
   background-color: #fefcfb;
   direction: rtl;
   padding-bottom: 40px;
@@ -110,7 +109,7 @@ p {
   background-color: transparent;
   padding: 10px 20px;
   border-radius: 12px;
-  max-width: 340px;
+  max-width: 420px;
   align-self: center;
   text-align: center;
 }
@@ -122,7 +121,7 @@ p {
 
 
 .full-logo {
-  max-width: 75%;
+  max-width: 85%;
   height: auto;
   margin-bottom: 15px;
 }
@@ -139,13 +138,13 @@ p {
   justify-content: center;
   line-height: 1.6;
   text-align: center;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Heebo', sans-serif;
 }
 
 .about-title {
   margin-top: 0;
   text-align: center;
-  font-size: 1.7em;
+  font-size: 1.5em;
 }
 
 .hero-content h1 {
