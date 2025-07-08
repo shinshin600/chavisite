@@ -86,9 +86,9 @@ p {
   background: url('images/hero.jpg') center/cover no-repeat;
   min-height: 100vh;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   text-align: right;
   padding: 40px;
   gap: 40px;
@@ -99,6 +99,7 @@ p {
   padding: 20px 30px;
   border-radius: 12px;
   max-width: 500px;
+  text-align: center;
 }
 
 .about-overlay {
