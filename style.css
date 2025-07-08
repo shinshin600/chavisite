@@ -330,6 +330,7 @@ p {
 }
 
 .testimonials-carousel {
+  direction: ltr;
   position: relative;
   max-width: 800px;
   margin: auto;
