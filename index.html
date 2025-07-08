@@ -4,36 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>חוי שיינברגר - אתר אישי</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet" integrity="sha384-4w4pNv2XdLT2A0i2Ghqy5MzZY1o5LZiN5N4dAJE1lghYzBL2cJlgd5tbhbcL1wQP" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 
   <header class="main-header">
-    <div class="logo-container">
-      <img src="logo.png" alt="לוגו חוי שיינברגר">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="logo-container">
+        <img src="logo.png" alt="לוגו חוי שיינברגר">
+      </div>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a href="index.html" class="nav-link active"><i class="fa-solid fa-house"></i> דף הבית</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link"><i class="fa-solid fa-info-circle"></i> אודות</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link"><i class="fa-solid fa-hand-holding-medical"></i> שירותים</a></li>
+          <li class="nav-item"><a href="#gallery" class="nav-link"><i class="fa-solid fa-image"></i> גלריה</a></li>
+          <li class="nav-item"><a href="#testimonials" class="nav-link"><i class="fa-solid fa-comments"></i> המלצות</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fa-solid fa-envelope"></i> צור קשר</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">דף הבית</a></li>
-        <li><a href="#about">אודות</a></li>
-        <li><a href="services.html">שירותים</a></li>
-        <li><a href="#gallery">גלריה</a></li>
-        <li><a href="#testimonials">המלצות</a></li>
-        <li><a href="contact.html">צור קשר</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main class="hero-section">
-    <div class="hero-content">
+    <div class="hero-content" data-aos="fade-right">
       <h1>חוי שיינברגר</h1>
       <p class="subtitle">את בידיים טובות</p>
       <p class="description">עיסוי מקצועי, קורסי הכנה ללידה וליווי רגשי לנשים בלבד</p>
       <a href="contact.html" class="btn-primary">לתיאום במייל</a>
     </div>
 
-    <div id="about" class="about-overlay">
+    <div id="about" class="about-overlay" data-aos="fade-left">
       <h2>קצת עלי</h2>
       <p>שמי חוי שיינברגר, ואני עוסקת בטיפול וליווי לנשים בלבד – כבר מעל לעשור.</p>
       <p>כמעסה רפואית מוסמכת ודולה מקצועית, אני מלווה נשים בתקופות הרגישות ביותר בחייהן – לקראת לידה, בהתמודדות עם כאבים, או בתקופות נפשיות מאתגרות.</p>
@@ -43,55 +51,60 @@
   </main>
 
 <section class="services-section">
-  <h2>השירותים שלי</h2>
+  <div class="container">
+    <h2 class="mb-4">השירותים שלי</h2>
 
-  <div class="services-grid">
-    <div class="service-box">
-      <img src="images/massage.jpg" alt="עיסוי רפואי לנשים">
-      <div class="service-overlay">
-        <h3>עיסוי רפואי לנשים</h3>
-        <p>עיסוי מקצועי, מותאם אישית לנשים בלבד – לשחרור, חיזוק והרפיה.</p>
+    <div class="services-grid">
+      <div class="service-box" data-aos="zoom-in">
+        <img src="images/massage.jpg" alt="עיסוי רפואי לנשים">
+        <div class="service-overlay">
+          <h3><i class="fa-solid fa-spa"></i> עיסוי רפואי לנשים</h3>
+          <p>עיסוי מקצועי, מותאם אישית לנשים בלבד – לשחרור, חיזוק והרפיה.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="service-box">
-      <img src="images/birth-prep.jpg" alt="הכנה ללידה">
-      <div class="service-overlay">
-        <h3>הכנה ללידה</h3>
-        <p>הדרכה אישית, העצמה, נשימות ותהליך רגשי לקראת הלידה.</p>
+      <div class="service-box" data-aos="zoom-in" data-aos-delay="100">
+        <img src="images/birth-prep.jpg" alt="הכנה ללידה">
+        <div class="service-overlay">
+          <h3><i class="fa-solid fa-baby"></i> הכנה ללידה</h3>
+          <p>הדרכה אישית, העצמה, נשימות ותהליך רגשי לקראת הלידה.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="service-box">
-      <img src="images/labor-support.jpg" alt="ליווי ותמיכת לידה">
-      <div class="service-overlay">
-        <h3>ליווי ותמיכת לידה</h3>
-        <p>תמיכה מקצועית ואנושית במהלך הלידה או בסמוך לה, באווירה רגועה.</p>
+      <div class="service-box" data-aos="zoom-in" data-aos-delay="200">
+        <img src="images/labor-support.jpg" alt="ליווי ותמיכת לידה">
+        <div class="service-overlay">
+          <h3><i class="fa-solid fa-hand-holding-heart"></i> ליווי ותמיכת לידה</h3>
+          <p>תמיכה מקצועית ואנושית במהלך הלידה או בסמוך לה, באווירה רגועה.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
   <section id="gallery" class="gallery-section">
-    <h2>גלריית רגעים</h2>
-    <div class="gallery-carousel">
-      <button class="carousel-arrow left">&#10094;</button>
-      <div class="carousel-track">
-        <img src="images/gallery1.jpg" alt="רגע מהגלריה 1">
-        <img src="images/gallery2.jpg" alt="רגע מהגלריה 2">
-        <img src="images/gallery3.jpg" alt="רגע מהגלריה 3">
-        <img src="images/gallery4.jpg" alt="רגע מהגלריה 4">
-        <img src="images/gallery5.jpg" alt="רגע מהגלריה 5">
+    <div class="container">
+      <h2>גלריית רגעים</h2>
+      <div class="gallery-carousel" data-aos="fade-up">
+        <button class="carousel-arrow left">&#10094;</button>
+        <div class="carousel-track">
+          <img src="images/gallery1.jpg" alt="רגע מהגלריה 1">
+          <img src="images/gallery2.jpg" alt="רגע מהגלריה 2">
+          <img src="images/gallery3.jpg" alt="רגע מהגלריה 3">
+          <img src="images/gallery4.jpg" alt="רגע מהגלריה 4">
+          <img src="images/gallery5.jpg" alt="רגע מהגלריה 5">
+        </div>
+        <button class="carousel-arrow right">&#10095;</button>
       </div>
-      <button class="carousel-arrow right">&#10095;</button>
     </div>
   </section>
 
   <section id="testimonials" class="testimonials-section">
-    <h2>לקוחות מספרות</h2>
-    <div class="testimonials-carousel">
-      <button class="testimonial-arrow left">&#10094;</button>
-      <div class="testimonial-track">
+    <div class="container">
+      <h2>לקוחות מספרות</h2>
+      <div class="testimonials-carousel" data-aos="fade-up">
+        <button class="testimonial-arrow left">&#10094;</button>
+        <div class="testimonial-track">
         <blockquote class="testimonial">
           <p>"חוי פשוט מדהימה! יצאתי מהעיסוי חדשה."</p>
           <footer>– מרים</footer>
@@ -133,26 +146,34 @@
           <footer>– שושי</footer>
         </blockquote>
       </div>
-      <button class="testimonial-arrow right">&#10095;</button>
-    </div>
-    <div style="margin-top: 30px;">
-      <a href="https://www.google.com/maps/place/%D7%97%D7%95%D7%99+%D7%A9%D7%99%D7%99%D7%A0%D7%91%D7%A8%D7%92%D7%A8+-+%D7%A2%D7%99%D7%A1%D7%95%D7%99+%D7%9E%D7%A7%D7%A6%D7%95%D7%A2%D7%99+%D7%9C%D7%A0%D7%A9%D7%99%D7%9D+%D7%91%D7%9C%D7%91%D7%93+%D7%95%D7%AA%D7%95%D7%9E%D7%9B%D7%AA+%D7%9C%D7%99%D7%93%D7%94" target="_blank" class="btn-primary">עוד המלצות בגוגל</a>
+        <button class="testimonial-arrow right">&#10095;</button>
+      </div>
+      <div style="margin-top: 30px;">
+        <a href="https://www.google.com/maps/place/%D7%97%D7%95%D7%99+%D7%A9%D7%99%D7%99%D7%A0%D7%91%D7%A8%D7%92%D7%A8+-+%D7%A2%D7%99%D7%A1%D7%95%D7%99+%D7%9E%D7%A7%D7%A6%D7%95%D7%A2%D7%99+%D7%9C%D7%A0%D7%A9%D7%99%D7%9D+%D7%91%D7%9C%D7%91%D7%93+%D7%95%D7%AA%D7%95%D7%9E%D7%9B%D7%AA+%D7%9C%D7%99%D7%93%D7%94" target="_blank" class="btn-primary">עוד המלצות בגוגל</a>
+      </div>
     </div>
   </section>
 
   <section id="location" class="location-section">
-    <h2>איך להגיע</h2>
-    <div class="map-container">
-      <iframe src="https://maps.google.com/maps?q=%D7%97%D7%95%D7%99%20%D7%A9%D7%99%D7%99%D7%A0%D7%91%D7%A8%D7%92%D7%A8&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    <div class="container" data-aos="fade-up">
+      <h2>איך להגיע</h2>
+      <div class="map-container">
+        <iframe src="https://maps.google.com/maps?q=%D7%97%D7%95%D7%99%20%D7%A9%D7%99%D7%99%D7%A0%D7%91%D7%A8%D7%92%D7%A8&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
     </div>
   </section>
 
 <footer class="main-footer">
-  <p>© כל הזכויות שמורות לחוי שיינברגר</p>
+  <div class="container">
+    <p>© כל הזכויות שמורות לחוי שיינברגר</p>
+  </div>
 </footer>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-QJHtvGhmr9bInhZRA2La1B1Vh5WcvM/Qe1CRWojc9kaPJkzQ0R6Xr5P0YfRvH+8A" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.addEventListener('DOMContentLoaded', function() {
     const track = document.querySelector('.carousel-track');
     const slides = Array.from(track.children);
     const btnPrev = document.querySelector('.carousel-arrow.left');
