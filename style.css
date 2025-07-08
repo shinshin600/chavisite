@@ -87,10 +87,10 @@ p {
 .hero-section {
   background: url('images/hero.jpg') center/cover no-repeat;
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  text-align: right;
+  text-align: center;
   padding: 40px;
   gap: 40px;
 }
@@ -100,7 +100,14 @@ p {
   padding: 20px 30px;
   border-radius: 12px;
   max-width: 300px;
-  justify-self: center;
+  align-self: center;
+  text-align: center;
+}
+
+.full-logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
 }
 
 .about-overlay {
@@ -110,9 +117,9 @@ p {
   border-radius: 12px;
   max-width: 500px;
   line-height: 1.6;
-  text-align: right;
+  text-align: center;
   font-family: 'Varela Round', sans-serif;
-  justify-self: end;
+  align-self: center;
 }
 
 .hero-content h1 {
