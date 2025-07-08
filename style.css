@@ -30,7 +30,8 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 10px 40px;
-  border-bottom: 1px solid #e5d3dc;
+  border-bottom: 2px solid #e5d3dc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo-container img {
@@ -42,18 +43,37 @@ p {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 25px;
+  gap: 20px;
+}
+
+.main-header nav ul li {
+  position: relative;
+  padding: 0 10px;
+}
+
+.main-header nav ul li + li::before {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 16px;
+  background-color: #e5d3dc;
 }
 
 .main-header nav ul li a {
   text-decoration: none;
   color: #8a4d66;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
+  padding-bottom: 4px;
+  transition: color 0.3s, border-bottom 0.3s;
 }
 
-.main-header nav ul li a:hover {
-  text-decoration: underline;
+.main-header nav ul li a:hover,
+.main-header nav ul li a.active {
+  border-bottom: 2px solid #8a4d66;
 }
 
 /* Hero */
