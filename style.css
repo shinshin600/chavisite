@@ -326,3 +326,30 @@ p {
 .testimonial-arrow.right {
   right: 10px;
 }
+
+/* Location Map */
+.location-section {
+  background-color: #f9f7f4;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.location-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #813f57;
+}
+
+.map-container {
+  max-width: 800px;
+  margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+}
