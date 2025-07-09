@@ -457,12 +457,30 @@ p {
   gap: 10px;
 }
 
+.name-email {
+  display: flex;
+  gap: 10px;
+}
+
+.name-email .form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .contact-form input,
 .contact-form textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-family: inherit;
+}
+
+.contact-form .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9em;
 }
 
 .contact-form button {
@@ -483,5 +501,9 @@ p {
   .hero-content {
     margin: 0 auto;
     text-align: center;
+  }
+
+  .name-email {
+    flex-direction: column;
   }
 }
