@@ -379,6 +379,8 @@ p {
   flex: 0 0 100%;
   padding: 0 20px;
   box-sizing: border-box;
+  border-right: 3px solid #e5d3dc;
+  margin: 0;
 }
 
 .testimonial p {
@@ -402,6 +404,7 @@ p {
   color: #8a4d66;
   cursor: pointer;
   user-select: none;
+  z-index: 2;
 }
 
 .testimonial-arrow.left {
