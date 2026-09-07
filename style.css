@@ -10,4 +10,5 @@
 @media(max-width:900px){.hero{background-image:linear-gradient(0deg,#fffaf6fa,#fffaf6bb 70%,#fffaf644),url('images/hero-v2.png')}}
 .location{background:#fffaf6}.map-wrap{height:460px;overflow:hidden;border-radius:24px;box-shadow:var(--shadow);border:1px solid #75435922}.map-wrap iframe{width:100%;height:100%;border:0}.map-link{margin-top:22px;color:var(--dark)}
 @media(max-width:620px){.map-wrap{height:360px}}
-
+.hero h1,.thanks h1,h2,h3,.brand-name{font-family:'Frank Ruhl Libre',Georgia,serif}.hero h1{font-size:clamp(3rem,6vw,4.65rem);font-weight:500;letter-spacing:0;line-height:1.08}.hero .lead{font-size:clamp(1.12rem,1.7vw,1.3rem);line-height:1.85}.brand-name{font-weight:500}.kicker{font-size:1rem;letter-spacing:.01em}.section p,.cards p,.heading>p{font-size:1.075rem;line-height:1.85}.intro{font-size:1.3rem!important}h2{font-size:clamp(2.25rem,4.2vw,3rem);font-weight:500}h3{font-size:1.55rem;font-weight:600}.muted,.cards p,.heading>p,.note,.footer{color:#655b5f}.button,nav{font-size:1.02rem}.contact input,.contact textarea{font-size:1.05rem}.track blockquote{line-height:1.75}
+@media(max-width:620px){body{font-size:1.04rem}.hero h1{font-size:clamp(2.8rem,15vw,4rem)}.section p,.cards p,.heading>p{font-size:1.04rem}h2{font-size:2.25rem}.brand-name{font-size:1.4rem}}
