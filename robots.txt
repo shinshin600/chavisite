@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shinshin600.github.io/chavisite/sitemap.xml
+
